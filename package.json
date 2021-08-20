@@ -1,18 +1,26 @@
 {
-  "name": "harrisoncliproject",
+  "name": "@horovitsg/joke-teller",
   "version": "1.0.0",
-  "description": "",
+  "description": "a joke-telling CLI",
   "main": "shim.js",
   "scripts": {
     "build": "babel src -d build",
     "start": "nodemon -I --exec babel-node src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run build"
   },
   "bin": {
     "joke": "./shim.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/horovitsg/JokeTellingRepo"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [],
-  "author": "Gal H",
+  "author": "Gal Horovits",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.14.8",
